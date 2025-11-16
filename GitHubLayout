@@ -1,0 +1,47 @@
+selectorwater/
+├─ .github/
+│  ├─ workflows/
+│  │  └─ build.yml
+├─ gradle/
+├─ gradlew
+├─ gradlew.bat
+├─ settings.gradle
+├─ build.gradle
+├─ README.md
+├─ LICENSE
+├─ src/
+│  ├─ main/java/com/example/selectorwater/
+│  │  ├─ SelectorWaterMod.java
+│  │  ├─ api/WaterPowerApi.java
+│  │  ├─ client/
+│  │  │  ├─ ClientInit.java
+│  │  │  └─ render/WaterSurfaceRenderer.java
+│  │  ├─ network/
+│  │  │  ├─ ModNetwork.java
+│  │  │  ├─ UpdateWaterTierPacket.java
+│  │  │  └─ BatchTierUpdatePacket.java
+│  │  ├─ registry/
+│  │  │  ├─ ModBlocks.java
+│  │  │  └─ ModBlockEntities.java
+│  │  ├─ util/Threading.java
+│  │  ├─ world/
+│  │  │  ├─ TickScheduler.java
+│  │  │  ├─ FlowSolver.java
+│  │  │  ├─ GlobalPredictive.java
+│  │  │  ├─ SelectorIndex.java
+│  │  │  ├─ ReservoirManager.java
+│  │  │  ├─ basin/BasinGeometry.java
+│  │  │  ├─ basin/PoissonSolver.java
+│  │  │  ├─ render/MarchingSquares.java
+│  │  │  ├─ net/ChunkBatcher.java
+│  │  │  ├─ perf/Profiler.java
+│  │  │  └─ block/
+│  │  │     ├─ WaterVoxelBlock.java
+│  │  │     └─ WaterVoxelBlockEntity.java
+│  ├─ main/resources/
+│     ├─ META-INF/mods.toml
+│     ├─ assets/selectorwater/
+│     │  ├─ blockstates/water_voxel.json
+│     │  ├─ models/block/water_voxel_tier_*.json
+│     │  └─ lang/en_us.json
+│     └─ pack.mcmeta
