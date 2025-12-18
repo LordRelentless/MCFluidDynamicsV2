@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "type=water": { "model": "mcfluiddynamicsv2:block/fluid_voxel_water" },
+    "type=ice": { "model": "mcfluiddynamicsv2:block/fluid_voxel_ice" },
+    "type=steam": { "model": "mcfluiddynamicsv2:block/fluid_voxel_steam" },
+    "type=snow": { "model": "mcfluiddynamicsv2:block/fluid_voxel_snow" },
+    "type=hail": { "model": "mcfluiddynamicsv2:block/fluid_voxel_hail" }
+  }
+}

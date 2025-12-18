@@ -1,0 +1,66 @@
+package com.lordrelentless.mcfluiddynamicsv2.capability;
+
+import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
+import net.neoforged.neoforge.common.capabilities.Capability;
+import net.neoforged.neoforge.common.capabilities.ICapabilityProvider;
+import net.neoforged.neoforge.common.util.LazyOptional;
+
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+
+public interface IWorldFluidIndex {
+    void addFluidPos(BlockPos pos);
+    void removeFluidPos(BlockPos pos);
+    List<BlockPos> getFluidPositions();
+    int getAndIncrementWeatherCounter();
+    void resetWeatherCounter();
+}
+
+public class WorldFluidIndexProvider implements ICapabilityProvider<ServerLevel, Void, IWorldFluidIndex> {
+    private final IWorldFluidIndex impl = new WorldFluidIndexImpl();
+    private final LazyOptional<IWorldFluidIndex> lazy = LazyOptional.of(() -> impl);
+
+    @Override
+    public LazyOptional<IWorldFluidIndex> getCapability(Capability<IWorldFluidIndex> cap, Void context) {
+        return cap == MCFluidDynamicsV2Mod.FLUID_INDEX_CAP ? lazy.cast() : LazyOptional.empty();
+    }
+}
+
+class WorldFluidIndexImpl implements IWorldFluidIndex {
+    private final Map<net.minecraft.world.level.ChunkPos, Set<BlockPos>> positions = new ConcurrentHashMap<>();
+    private int weatherTickCounter = 0;
+
+    @Override
+    public void addFluidPos(BlockPos pos) {
+        net.minecraft.world.level.ChunkPos chunk = new net.minecraft.world.level.ChunkPos(pos);
+        positions.computeIfAbsent(chunk, k -> ConcurrentHashMap.newKeySet()).add(pos);
+    }
+
+    @Override
+    public void removeFluidPos(BlockPos pos) {
+        net.minecraft.world.level.ChunkPos chunk = new net.minecraft.world.level.ChunkPos(pos);
+        Set<BlockPos> set = positions.get(chunk);
+        if (set != null) {
+            set.remove(pos);
+            if (set.isEmpty()) positions.remove(chunk);
+        }
+    }
+
+    @Override
+    public List<BlockPos> getFluidPositions() {
+        List<BlockPos> list = new ArrayList<>();
+        positions.values().forEach(list::addAll);
+        return list;
+    }
+
+    @Override
+    public int getAndIncrementWeatherCounter() {
+        return weatherTickCounter++;
+    }
+
+    @Override
+    public void resetWeatherCounter() {
+        weatherTickCounter = 0;
+    }
+}

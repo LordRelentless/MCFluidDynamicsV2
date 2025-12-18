@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[52,)"
+license="MIT"
+issueTrackerURL="https://github.com/LordRelentless/MCFluidDynamicsV2/issues"
+
+[[mods]]
+modId="mcfluiddynamicsv2"
+version="2.0.0"
+displayName="MC Fluid Dynamics V2"
+description="Voxelized fluid dynamics ported from TS prototype with realistic pressure flow."
+authors="LordRelentless"
+credits="Gemini 3 Pro preview for TS prototype"
+logoFile="icon.png"
+
+[[dependencies.mcfluiddynamicsv2]]
+modId="forge"
+mandatory=true
+versionRange="[21.1,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.mcfluiddynamicsv2]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.21.1,1.22)"
+ordering="NONE"
+side="BOTH"

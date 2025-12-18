@@ -1,0 +1,5 @@
+{
+  "name": "Voxelized Water Physics for Minecraft",
+  "description": "An attempt to implement true fluid dynamics in a voxelized structure for Minecraft, visual showcase. ",
+  "requestFramePermissions": []
+}

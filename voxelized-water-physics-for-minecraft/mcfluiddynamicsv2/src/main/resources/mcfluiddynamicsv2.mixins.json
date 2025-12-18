@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.lordrelentless.mcfluiddynamicsv2.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "mcfluiddynamicsv2.refmap.json",
+  "mixins": [
+    "YourMixinClass"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

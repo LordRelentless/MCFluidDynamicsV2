@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",  // Or "minecraft:block/template_fluid" if fluid-like
+  "textures": {
+    "all": "minecraft:block/water_still"  // Vanilla water; or "mcfluiddynamicsv2:block/my_water" for local PNG
+  }
+}

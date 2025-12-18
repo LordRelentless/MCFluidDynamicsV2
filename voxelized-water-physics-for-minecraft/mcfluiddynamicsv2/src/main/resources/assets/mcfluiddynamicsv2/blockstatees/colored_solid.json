@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "color=white": { "model": "mcfluiddynamicsv2:block/colored_solid_white" },
+    "color=black": { "model": "mcfluiddynamicsv2:block/colored_solid_black" },
+    // Add all DyeColor variants, or use multipart for dynamic tinting
+    ""
+  }
+}

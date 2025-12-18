@@ -1,0 +1,8 @@
+// Step 1: NeoForge Project Setup (assuming MDK 1.21.1)
+// Update build.gradle:
+dependencies {
+    minecraft "net.neoforged:neoforge:21.1.65"  // Latest stable as of Dec 2025
+    // ... other
+}
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+// Run ./gradlew genEclipseRuns (or IntelliJ setup)

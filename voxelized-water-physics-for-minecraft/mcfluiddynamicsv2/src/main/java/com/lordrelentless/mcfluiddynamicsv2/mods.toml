@@ -1,0 +1,40 @@
+modLoader="javafml"
+loaderVersion="[52,)"
+license="MIT"
+issueTrackerURL="https://github.com/LordRelentless/MCFluidDynamicsV2/issues"
+
+[[mods]]
+modId="mcfluiddynamicsv2"
+version="2.0.0"
+displayName="MC Fluid Dynamics V2"
+description="Voxelized fluid dynamics ported from TS prototype with realistic pressure flow."
+authors="LordRelentless"
+credits="Gemini 3 Pro preview for TS prototype"
+logoFile="icon.png"
+
+[[dependencies.mcfluiddynamicsv2]]
+modId="forge"
+mandatory=true
+versionRange="[21.1,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.mcfluiddynamicsv2]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.21.1,1.22)"
+ordering="NONE"
+side="BOTH"
+
+
+// [[mixins]]
+// config = "mcfluiddynamicsv2.mixins.json"
+// package = "com.lordrelentless.mcfluiddynamicsv2.mixin"  # Your mixin package
+// refmap = "mcfluiddynamicsv2.refmap.json"
+
+[[dependencies.mcfluiddynamicsv2]]
+modId="create"
+mandatory=false  # Soft dep—mod loads without Create
+versionRange="[0.6.0,)"  # Covers 0.6.0 to 0.6.8 and future compatibles
+ordering="AFTER"  # Load after Create to hook into its API
+side="BOTH"

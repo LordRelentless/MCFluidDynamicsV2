@@ -1,0 +1,16 @@
+
+{
+"itemGroup.mcfluiddynamicsv2": "MC Fluid Dynamics V2",
+"block.mcfluiddynamicsv2.colored_solid": "Colored Solid Block",
+"block.mcfluiddynamicsv2.fluid_voxel": "Fluid Voxel Block",
+"item.mcfluiddynamicsv2.colored_solid": "Colored Solid Block",
+"item.mcfluiddynamicsv2.fluid_voxel": "Fluid Voxel Block",
+
+"mcfluiddynamicsv2.configuration.title": "MC Fluid Dynamics V2 Configs",
+"mcfluiddynamicsv2.configuration.section.mcfluiddynamicsv2.common.toml": "MC Fluid Dynamics V2 Configs",
+"mcfluiddynamicsv2.configuration.section.mcfluiddynamicsv2.common.toml.title": "MC Fluid Dynamics V2 Configs",
+"mcfluiddynamicsv2.configuration.items": "Item List",
+"mcfluiddynamicsv2.configuration.logDirtBlock": "Log Dirt Block",
+"mcfluiddynamicsv2.configuration.magicNumberIntroduction": "Magic Number Text",
+"mcfluiddynamicsv2.configuration.magicNumber": "Magic Number"
+}
